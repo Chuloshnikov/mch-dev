@@ -30,19 +30,33 @@ export const skills = {
       title: "Full-Stack Developer",
       company: "Capps (Contract)",
       period: "2024 - Present",
-      description: "Developing full-stack solutions with Next.js, optimizing legacy systems",
+      description: [
+        "Developed full-stack solutions aligned with business requirements.",
+        "Integrated server-side rendering using Next.js for performance and SEO gains.",
+        "Assisted team members in debugging, planning, and delivering features.",
+        "Supported and optimized legacy monolithic systems."
+      ] ,
     },
     {
       title: "Full-Stack Developer",
       company: "Freelance",
       period: "2022 - 2024",
-      description: "Built web applications with React, Next.js, integrated payment systems",
+      description: [
+        "Built full-stack web applications using Next.js, React, Redux Toolkit, MongoDB, and PostgreSQL.",
+        "Integrated Stripe and PayPal for e-commerce platforms.",
+        "Implemented authentication via JWT, OAuth, Auth.js, and NextAuth.js.",
+        "Delivered responsive admin dashboards and optimized application performance."
+      ] ,
     },
     {
       title: "Frontend Developer",
       company: "Web Scout",
       period: "2020 - 2022",
-      description: "Created responsive UIs, translated Figma designs to pixel-perfect components",
+      description: [
+        "Built responsive user interfaces with React, SCSS, MUI, and Styled-components.",
+        "Translated Figma designs into pixel-perfect components.",
+        "Implemented interactive UI components (modals, sliders, Kanban boards) and complex form validation using Yup/Zod.",
+      ] ,
     },
   ];
 
