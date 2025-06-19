@@ -8,7 +8,7 @@ import { skills } from '@/utils/data';
 
 const SkillsSection = () => {
   return (
-    <section className="py-20 px-4 bg-black/20">
+    <section id="skills" className="py-20 px-4 bg-black/20">
         <div className="max-w-6xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 50 }}

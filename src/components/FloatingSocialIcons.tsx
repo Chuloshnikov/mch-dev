@@ -11,13 +11,17 @@ const FloatingSocialIcons = () => {
         >
           <motion.a
             href="https://github.com/Chuloshnikov"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.2, rotate: 360 }}
             className="block p-3 bg-gray-800 rounded-full hover:bg-yellow-400 hover:text-black transition-colors"
           >
             <Github className="h-6 w-6" />
           </motion.a>
           <motion.a
-            href="#"
+            href="https://www.linkedin.com/in/maksym-chuloshnikov-ba9a0283/"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.2, rotate: 360 }}
             className="block p-3 bg-gray-800 rounded-full hover:bg-yellow-400 hover:text-black transition-colors"
           >

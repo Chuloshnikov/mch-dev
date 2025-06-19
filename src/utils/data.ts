@@ -28,7 +28,7 @@ export const skills = {
   export const experience = [
     {
       title: "Full-Stack Developer",
-      company: "Capps (Contract)",
+      company: "Capps (part-time/remote)",
       period: "2024 - Present",
       description: [
         "Developed full-stack solutions aligned with business requirements.",
@@ -39,7 +39,7 @@ export const skills = {
     },
     {
       title: "Full-Stack Developer",
-      company: "Freelance",
+      company: "Freelance (remote)",
       period: "2022 - 2024",
       description: [
         "Built full-stack web applications using Next.js, React, Redux Toolkit, MongoDB, and PostgreSQL.",
@@ -50,7 +50,7 @@ export const skills = {
     },
     {
       title: "Frontend Developer",
-      company: "Web Scout",
+      company: "Web Scout (office)",
       period: "2020 - 2022",
       description: [
         "Built responsive user interfaces with React, SCSS, MUI, and Styled-components.",
