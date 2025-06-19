@@ -1,0 +1,97 @@
+"use client"
+
+import Scene3D from './Scene3D';
+import { motion } from "framer-motion"
+import { Button } from './ui/button';
+import { Download, Github, Linkedin, Mail } from 'lucide-react';
+
+const HeroSection = () => {
+  return (
+     <section className="relative min-h-screen flex items-center justify-center">
+        <div className="absolute inset-0 w-full h-full">
+          <Scene3D />
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="relative z-10 text-center px-4"
+        >
+          <motion.h1
+            className="text-4xl md:text-8xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"
+            animate={{
+              backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Number.POSITIVE_INFINITY,
+              ease: "linear",
+            }}
+          >
+            Maxym Chuloshnikov
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 1 }}
+            className="text-lg md:text-2xl mb-8 text-gray-300"
+          >
+            Full-Stack Web Developer | React, Next.js, Node.js
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 0.8 }}
+            className="flex flex-wrap gap-4 justify-center"
+          >
+            <Button className="cursor-pointer bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold">
+              <Download className="mr-2 h-4 w-4" />
+              Download CV
+            </Button>
+            <Button
+              variant="outline"
+              className="cursor-pointer border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black"
+            >
+              <Mail className="mr-2 h-4 w-4" />
+              Contact Me
+            </Button>
+          </motion.div>
+        </motion.div>
+
+        {/* Floating Social Icons */}
+        <motion.div
+          className="fixed hidden sm:inline left-8 top-1/2 transform -translate-y-1/2 z-20 space-y-4"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 1.5, duration: 0.8 }}
+        >
+          <motion.a
+            href="https://github.com/Chuloshnikov"
+            whileHover={{ scale: 1.2, rotate: 360 }}
+            className="block p-3 bg-gray-800 rounded-full hover:bg-yellow-400 hover:text-black transition-colors"
+          >
+            <Github className="h-6 w-6" />
+          </motion.a>
+          <motion.a
+            href="#"
+            whileHover={{ scale: 1.2, rotate: 360 }}
+            className="block p-3 bg-gray-800 rounded-full hover:bg-yellow-400 hover:text-black transition-colors"
+          >
+            <Linkedin className="h-6 w-6" />
+          </motion.a>
+          <motion.a
+            href="mailto:maks447@ukr.net"
+            whileHover={{ scale: 1.2, rotate: 360 }}
+            className="block p-3 bg-gray-800 rounded-full hover:bg-yellow-400 hover:text-black transition-colors"
+          >
+            <Mail className="h-6 w-6" />
+          </motion.a>
+        </motion.div>
+      </section>
+  )
+}
+
+export default HeroSection;
