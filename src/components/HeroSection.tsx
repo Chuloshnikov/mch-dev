@@ -5,6 +5,8 @@ import { motion } from "framer-motion"
 import { Button } from './ui/button';
 import { Download, Github, Linkedin, Mail } from 'lucide-react';
 import FloatingSocialIcons from './FloatingSocialIcons';
+import CV from '../assets/docs/CV.pdf';
+import Link from 'next/link';
 
 const HeroSection = () => {
   return (
@@ -48,10 +50,15 @@ const HeroSection = () => {
             transition={{ delay: 1, duration: 0.8 }}
             className="flex flex-wrap gap-4 justify-center"
           >
-            <Button className="cursor-pointer bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold">
-              <Download className="mr-2 h-4 w-4" />
-              Download CV
-            </Button>
+            <Link
+            href="/docs/CV.pdf"
+            >
+                <Button className="cursor-pointer bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold">
+                    <Download className="mr-2 h-4 w-4" />
+                    Download CV
+                </Button>
+            </Link>
+           
             <Button
               variant="outline"
               className="cursor-pointer border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black"
