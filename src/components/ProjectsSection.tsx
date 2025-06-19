@@ -15,7 +15,7 @@ const ProjectsSection = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"
+            className="text-4xl md:text-5xl font-bold text-center mb-18 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent py-2"
           >
             Featured Projects
           </motion.h2>
@@ -42,7 +42,7 @@ const ProjectsSection = () => {
                     </div>
                     <Button
                       variant="outline"
-                      className="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black w-full"
+                      className="cursor-pointer border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black w-full"
                     >
                       <ExternalLink className="mr-2 h-4 w-4" />
                       View Project
