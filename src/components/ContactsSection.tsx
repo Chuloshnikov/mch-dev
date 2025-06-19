@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 import { Mail, Phone } from "lucide-react";
 import Link from "next/link";
+import ContactForm from "./ContactForm";
 
 const ContactsSection = () => {
   return (
@@ -53,6 +54,15 @@ const ContactsSection = () => {
                 </Button>
            </Link>
           </motion.div>
+           <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          >
+            <ContactForm/>
+          </motion.div>
+          
         </div>
       </section>
   )
