@@ -1,8 +1,6 @@
 "use client"
 
 import { aboutItemsData } from "@/utils/data";
-import { Float, OrbitControls } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
 import { motion, useMotionValue } from "framer-motion";
 import AboutItem from "./AboutItem";
 import { profilePic } from "@/assets";
@@ -51,7 +49,7 @@ const AboutSection = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-            <div className="w-full rounded-full relative">
+            <div className="w-full rounded-2xl relative bg-gradient-to-br from-yellow-400/20 to-orange-500/20 p-4">
                 <Image src={profilePic} width={500} height={500} alt="Profile Picture" className="w-full h-full object-cover rounded-2xl" />
                 <div className="absolute top-0 left-0 bg-black/20 w-full h-full z-50 rounded-full"/>
             </div>
