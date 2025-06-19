@@ -2,7 +2,7 @@ export const skills = {
     frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Redux Toolkit", "Framer Motion"],
     backend: ["Node.js", "Express.js", "MongoDB", "PostgreSQL", "Prisma", "JWT"],
     tools: ["Git", "Docker", "AWS S3", "Stripe API", "PayPal API", "Figma"],
-  }
+  };
 
   export const projects = [
     {
@@ -23,7 +23,7 @@ export const skills = {
       tech: ["React", "Shadcn/UI", "Tailwind CSS", "Storybook"],
       link: "#",
     },
-  ]
+  ];
 
   export const experience = [
     {
@@ -44,4 +44,19 @@ export const skills = {
       period: "2020 - 2022",
       description: "Created responsive UIs, translated Figma designs to pixel-perfect components",
     },
-  ]
+  ];
+
+export const aboutItemsData = [
+    {
+        title: "4+",
+        subTitle: "Years Experience"
+    },
+    {
+        title: "20+",
+        subTitle: "Projects Completed"
+    },
+    {
+        title: "100%",
+        subTitle: "Client Satisfaction"
+    }
+]

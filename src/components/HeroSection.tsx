@@ -4,6 +4,7 @@ import Scene3D from './Scene3D';
 import { motion } from "framer-motion"
 import { Button } from './ui/button';
 import { Download, Github, Linkedin, Mail } from 'lucide-react';
+import FloatingSocialIcons from './FloatingSocialIcons';
 
 const HeroSection = () => {
   return (
@@ -60,36 +61,7 @@ const HeroSection = () => {
             </Button>
           </motion.div>
         </motion.div>
-
-        {/* Floating Social Icons */}
-        <motion.div
-          className="fixed hidden sm:inline left-8 top-1/2 transform -translate-y-1/2 z-20 space-y-4"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 1.5, duration: 0.8 }}
-        >
-          <motion.a
-            href="https://github.com/Chuloshnikov"
-            whileHover={{ scale: 1.2, rotate: 360 }}
-            className="block p-3 bg-gray-800 rounded-full hover:bg-yellow-400 hover:text-black transition-colors"
-          >
-            <Github className="h-6 w-6" />
-          </motion.a>
-          <motion.a
-            href="#"
-            whileHover={{ scale: 1.2, rotate: 360 }}
-            className="block p-3 bg-gray-800 rounded-full hover:bg-yellow-400 hover:text-black transition-colors"
-          >
-            <Linkedin className="h-6 w-6" />
-          </motion.a>
-          <motion.a
-            href="mailto:maks447@ukr.net"
-            whileHover={{ scale: 1.2, rotate: 360 }}
-            className="block p-3 bg-gray-800 rounded-full hover:bg-yellow-400 hover:text-black transition-colors"
-          >
-            <Mail className="h-6 w-6" />
-          </motion.a>
-        </motion.div>
+       <FloatingSocialIcons/>
       </section>
   )
 }
