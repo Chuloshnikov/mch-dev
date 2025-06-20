@@ -10,7 +10,8 @@ const AboutSection = () => {
     const y = useMotionValue(0);
 
   return (
-     <motion.section id="about" style={{ y }} className="py-20 px-4 relative">
+    <section id="about" className="py-20 px-4">
+     <motion.div style={{ y }} className="mx-auto">
         <div className="max-w-6xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
@@ -56,7 +57,8 @@ const AboutSection = () => {
             </motion.div>
           </div>
         </div>
-      </motion.section>
+      </motion.div>
+      </section>
   )
 }
 
