@@ -3,7 +3,7 @@
 import Scene3D from './Scene3D';
 import { motion } from "framer-motion"
 import { Button } from './ui/button';
-import { Download, Github, Linkedin, Mail } from 'lucide-react';
+import { Download, Mail } from 'lucide-react';
 import FloatingSocialIcons from './FloatingSocialIcons';
 import Link from 'next/link';
 

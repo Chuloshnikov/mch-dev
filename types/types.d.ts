@@ -11,6 +11,13 @@ type FormValues = {
   message: string;
 };
 
+interface ProjectItemProps {
+  title: string;
+  description: string;
+  tech: string[];
+  link: string;
+}
+
 interface FormStatus {
   type: "idle" | "loading" | "success" | "error";
   message: string;

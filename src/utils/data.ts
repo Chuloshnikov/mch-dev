@@ -12,16 +12,16 @@ export const skills = {
       link: "https://joobly-devmod.vercel.app/",
     },
     {
-      title: "Admin Dashboard",
-      description: "Internal admin panel with React, Redux, and Prisma for content management",
-      tech: ["React", "Redux", "Prisma", "PostgreSQL"],
-      link: "#",
-    },
-    {
       title: "Personal blog",
       description: "Blog created on Next.js with SSR with admin panel, post filtering, post views and reactions tracking system.",
       tech: ["Next.js", "Redux Toolkit", "Tailwind CSS", "Framer Motion", "MongoDb",],
       link: "https://maxter-blog.vercel.app/",
+    },
+     {
+      title: "Animated Landing Page",
+      description: "Internal admin panel with Next.js, Tailwind css and Framer Motion",
+      tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
+      link: "https://pathway-landing-nu.vercel.app/",
     },
   ];
 
