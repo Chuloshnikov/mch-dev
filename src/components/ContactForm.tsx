@@ -1,7 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import { useState } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -22,8 +21,6 @@ type FormStatus = {
 };
 
 const ContactForm = () => {
-  const formRef = useRef<HTMLFormElement>(null);
-
   const [status, setStatus] = useState<FormStatus>({
     type: "idle",
     message: "",
@@ -38,26 +35,30 @@ const ContactForm = () => {
     },
   });
 
-  const onSubmit = async () => {
+  const onSubmit = async (data: FormValues) => {
+    setStatus({ type: "loading", message: "Sending message..." });
+
     try {
-      if (!formRef.current) return;
-
-      setStatus({ type: "loading", message: "Sending message..." });
-
-      await emailjs.sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        formRef.current,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-      );
-
-      setStatus({
-        type: "success",
-        message: "Message sent successfully! I'll get back to you soon.",
+      const res = await fetch("/api/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
       });
 
-      form.reset();
-      toast.success("Message sent!");
+      if (!res.ok) throw new Error("Network error");
+
+      const result = await res.json();
+
+      if (result.success) {
+        setStatus({
+          type: "success",
+          message: "Message sent successfully! I'll get back to you soon.",
+        });
+        form.reset();
+        toast.success("Message sent!");
+      } else {
+        throw new Error(result.error || "Send failed");
+      }
     } catch (error) {
       console.error(error);
       setStatus({
@@ -71,36 +72,35 @@ const ContactForm = () => {
   return (
     <Form {...form}>
       <form
-        ref={formRef}
         onSubmit={form.handleSubmit(onSubmit)}
-        className=" flex flex-col gap-2 w-full max-w-lg mx-auto bg-gradient-to-br from-purple-900/50 to-purple-800/50 border border-purple-700/50 backdrop-blur-sm p-8 rounded-lg"
+        className="flex flex-col gap-2 w-full max-w-lg mx-auto bg-gradient-to-br from-purple-900/50 to-purple-800/50 border border-purple-700/50 backdrop-blur-sm p-8 rounded-lg"
       >
-       <CustomFormField<FormValues>
-        control={form.control}
-        name="name"
-        label="Name"
-        placeholder="John Doe"
-        disabled={status.type === "loading"}
+        <CustomFormField<FormValues>
+          control={form.control}
+          name="name"
+          label="Name"
+          placeholder="John Doe"
+          disabled={status.type === "loading"}
         />
 
         <CustomFormField<FormValues>
-        control={form.control}
-        name="email"
-        label="Email"
-        placeholder="john@example.com"
-        type="email"
-        disabled={status.type === "loading"}
+          control={form.control}
+          name="email"
+          label="Email"
+          placeholder="john@example.com"
+          type="email"
+          disabled={status.type === "loading"}
         />
 
         <CustomFormField<FormValues>
-        control={form.control}
-        name="message"
-        label="Message"
-        placeholder="Type your message here..."
-        isTextarea
-        disabled={status.type === "loading"}
+          control={form.control}
+          name="message"
+          label="Message"
+          placeholder="Type your message here..."
+          isTextarea
+          disabled={status.type === "loading"}
         />
-        {/* Submit */}
+
         <motion.div
           whileHover={{ scale: status.type === "loading" ? 1 : 1.02 }}
           whileTap={{ scale: status.type === "loading" ? 1 : 0.98 }}
@@ -125,22 +125,26 @@ const ContactForm = () => {
           </Button>
         </motion.div>
 
-        {/* Status feedback */}
-        {status.type !== "idle" && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className={`flex items-center space-x-2 p-3 rounded-lg mt-4 ${
+       {status.type !== "idle" && (
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className={`flex items-center space-x-2 p-3 rounded-lg mt-4
+            ${
               status.type === "success"
                 ? "bg-green-500/20 text-green-400 border border-green-500/30"
-                : "bg-red-500/20 text-red-400 border border-red-500/30"
-            }`}
-          >
-            {status.type === "success" && <CheckCircle className="h-5 w-5" />}
-            {status.type === "error" && <AlertCircle className="h-5 w-5" />}
-            <span className="text-sm font-medium">{status.message}</span>
-          </motion.div>
-        )}
+                : status.type === "error"
+                ? "bg-red-500/20 text-red-400 border border-red-500/30"
+                : "bg-gray-500/20 text-gray-300 border border-gray-500/30"
+            }
+          `}
+        >
+          {status.type === "success" && <CheckCircle className="h-5 w-5" />}
+          {status.type === "error" && <AlertCircle className="h-5 w-5" />}
+          {status.type === "loading" && <Send className="h-5 w-5 animate-spin" />}
+          <span className="text-sm font-medium">{status.message}</span>
+        </motion.div>
+      )}
       </form>
     </Form>
   );
