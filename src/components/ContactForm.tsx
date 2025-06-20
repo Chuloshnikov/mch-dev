@@ -6,7 +6,7 @@ import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
-import { toast } from "sonner"; // если используешь toast
+import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
 import { Send, CheckCircle, AlertCircle } from "lucide-react";
@@ -78,7 +78,7 @@ const ContactForm = () => {
        <CustomFormField<FormValues>
         control={form.control}
         name="name"
-        label="Your Name"
+        label="Name"
         placeholder="John Doe"
         disabled={status.type === "loading"}
         />
@@ -86,7 +86,7 @@ const ContactForm = () => {
         <CustomFormField<FormValues>
         control={form.control}
         name="email"
-        label="Your Email"
+        label="Email"
         placeholder="john@example.com"
         type="email"
         disabled={status.type === "loading"}
@@ -95,7 +95,7 @@ const ContactForm = () => {
         <CustomFormField<FormValues>
         control={form.control}
         name="message"
-        label="Your Message"
+        label="Message"
         placeholder="Type your message here..."
         isTextarea
         disabled={status.type === "loading"}

@@ -6,10 +6,10 @@ export const skills = {
 
   export const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-featured online store with Next.js, Stripe integration, and SSR",
-      tech: ["Next.js", "Stripe", "MongoDB", "Tailwind CSS"],
-      link: "#",
+      title: "Job portal",
+      description: "Full-featured online job portal with Next.js, Stripe and PayPal integration",
+      tech: ["Next.js", "Redux Toolkit", "Stripe", "PayPal", "MongoDB", "Tailwind CSS", "Framer Motion", "Google Docs API"],
+      link: "https://joobly-devmod.vercel.app/",
     },
     {
       title: "Admin Dashboard",
@@ -18,10 +18,10 @@ export const skills = {
       link: "#",
     },
     {
-      title: "UI Component Library",
-      description: "Reusable design system using Shadcn/UI and Tailwind CSS",
-      tech: ["React", "Shadcn/UI", "Tailwind CSS", "Storybook"],
-      link: "#",
+      title: "Personal blog",
+      description: "Blog created on Next.js with SSR with admin panel, post filtering, post views and reactions tracking system.",
+      tech: ["Next.js", "Redux Toolkit", "Tailwind CSS", "Framer Motion", "MongoDb",],
+      link: "https://maxter-blog.vercel.app/",
     },
   ];
 
