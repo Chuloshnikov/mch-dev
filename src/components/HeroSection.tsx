@@ -1,6 +1,6 @@
 "use client"
 
-//import Scene3D from './Scene3D';
+import Scene3D from './Scene3D';
 import { motion } from "framer-motion"
 import { Button } from './ui/button';
 import { Download, Mail } from 'lucide-react';
@@ -11,7 +11,7 @@ const HeroSection = () => {
   return (
      <section className="relative min-h-screen flex items-center justify-center">
         <div className="absolute inset-0 w-full h-full">
-          {/*<Scene3D />*/}
+          <Scene3D />
         </div>
 
         <motion.div
