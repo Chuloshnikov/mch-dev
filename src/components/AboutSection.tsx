@@ -10,7 +10,7 @@ const AboutSection = () => {
     const y = useMotionValue(0);
 
   return (
-     <motion.section id="about" style={{ y }} className="pt-10 pb-20 px-4 relative">
+     <motion.section id="about" style={{ y }} className="py-20 px-4 relative">
         <div className="max-w-6xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 50 }}

@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 const HeroSection = () => {
   return (
-     <section className="relative min-h-screen flex items-center justify-center">
+     <section className="relative min-h-screen py-20 flex items-center justify-center">
         <div className="absolute inset-0 w-full h-full">
           <Scene3D />
         </div>
