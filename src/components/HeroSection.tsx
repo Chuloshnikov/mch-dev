@@ -31,7 +31,7 @@ const HeroSection = () => {
               ease: "linear",
             }}
           >
-            Maxym Chuloshnikov
+            Maksym Chuloshnikov
           </motion.h1>
 
           <motion.p
