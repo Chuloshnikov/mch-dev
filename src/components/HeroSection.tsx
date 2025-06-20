@@ -21,7 +21,7 @@ const HeroSection = () => {
           className="relative z-10 text-center px-4"
         >
           <motion.h1
-            className="text-4xl md:text-8xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"
+            className="text-4xl md:text-8xl font-bold py-4 mb-4 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"
             animate={{
               backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
             }}
