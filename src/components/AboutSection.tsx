@@ -10,7 +10,7 @@ const AboutSection = () => {
     const y = useMotionValue(0);
 
   return (
-    <section id="about" className="py-20 px-4">
+    <section id="about" className="pt-8 pb-20 md:py-20 px-4">
      <motion.div style={{ y }} className="mx-auto">
         <div className="max-w-6xl mx-auto">
           <motion.h2
