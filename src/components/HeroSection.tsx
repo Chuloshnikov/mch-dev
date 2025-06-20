@@ -5,7 +5,6 @@ import { motion } from "framer-motion"
 import { Button } from './ui/button';
 import { Download, Github, Linkedin, Mail } from 'lucide-react';
 import FloatingSocialIcons from './FloatingSocialIcons';
-import CV from '../assets/docs/CV.pdf';
 import Link from 'next/link';
 
 const HeroSection = () => {
@@ -58,14 +57,19 @@ const HeroSection = () => {
                     Download CV
                 </Button>
             </Link>
-           
-            <Button
+            
+            <Link
+            href="#contacts"
+            >
+              <Button
               variant="outline"
               className="cursor-pointer border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black"
             >
               <Mail className="mr-2 h-4 w-4" />
               Contact Me
             </Button>
+            </Link>
+           
           </motion.div>
         </motion.div>
        <FloatingSocialIcons/>

@@ -47,7 +47,7 @@ const ContactsSection = () => {
            >
                 <Button
                 variant="outline"
-                className="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black text-lg px-8 py-3"
+                className="cursor-pointer border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black text-lg px-8 py-3"
                 >
                     <Phone className="mr-2 h-5 w-5" />
                     +380 730 452 115 (WhatsApp)

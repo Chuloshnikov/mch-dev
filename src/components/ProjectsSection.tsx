@@ -6,6 +6,7 @@ import { Card, CardContent } from "./ui/card";
 import { ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
+import Link from "next/link";
 
 const ProjectsSection = () => {
   return (
@@ -40,13 +41,19 @@ const ProjectsSection = () => {
                         </Badge>
                       ))}
                     </div>
-                    <Button
-                      variant="outline"
-                      className="cursor-pointer border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black w-full"
+                    <Link
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     >
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      View Project
-                    </Button>
+                        <Button
+                        variant="outline"
+                        className="cursor-pointer border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black w-full"
+                        >
+                          <ExternalLink className="mr-2 h-4 w-4" />
+                          View Project
+                        </Button>
+                    </Link>
                   </CardContent>
                 </Card>
               </motion.div>
