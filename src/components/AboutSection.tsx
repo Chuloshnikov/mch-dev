@@ -34,7 +34,7 @@ const AboutSection = () => {
               </p>
               <p className="text-lg text-gray-300 mb-8 leading-relaxed">
                 Known for writing clean code, implementing beautiful UI/UX, and consistently contributing to team
-                success. I'm passionate about learning new technologies and solving complex problems.
+                success. I&apos;m passionate about learning new technologies and solving complex problems.
               </p>
 
               <div className="flex flex-col md:flex-row gap-6 justify-between text-center w-full">
