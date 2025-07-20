@@ -108,7 +108,7 @@ const ContactForm = () => {
           <Button
             type="submit"
             disabled={status.type === "loading"}
-            className="mt-8 w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold h-12 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
+            className="cursor-pointer mt-8 w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold h-12 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {status.type === "loading" ? (
               <motion.div
