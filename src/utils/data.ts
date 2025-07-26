@@ -17,11 +17,11 @@ export const skills = {
       tech: ["Next.js", "Redux Toolkit", "Tailwind CSS", "Framer Motion", "MongoDb",],
       link: "https://maxter-blog.vercel.app/",
     },
-     {
-      title: "Animated Landing Page",
-      description: "Internal admin panel with Next.js, Tailwind css and Framer Motion",
-      tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
-      link: "https://pathway-landing-nu.vercel.app/",
+    {
+      title: "Pizza store",
+      description: "Full-stack food store with with a user account and admin dashboard.",
+      tech: ["Next.js", "NextAuth", "Stripe", "MongoDB", "Tailwind CSS", "ShadcnUI"],
+      link: "https://crustcraft.vercel.app/",
     },
   ];
 
