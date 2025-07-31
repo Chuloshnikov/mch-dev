@@ -1,5 +1,5 @@
 export const skills = {
-    frontend: ["React", "Next.js", "Qwik", "TypeScript", "Tailwind CSS", "Redux Toolkit", "Framer Motion, Webpack", "Shadcn/UI", "Websocket-client", "Material UI", "Styled-components", "SASS/SCSS"],
+    frontend: ["React", "Next.js", "React Native(Expo)", "Qwik", "TypeScript", "Tailwind CSS", "Redux Toolkit", "Framer Motion", "Webpack", "Shadcn/UI", "Websocket-client", "Material UI", "Styled-components", "SASS/SCSS"],
     backend: ["Node.js", "Express.js", "MongoDB", "PostgreSQL", "Prisma ORM", "Mongoose", "JWT", "Websocket"],
     tools: ["Git", "Docker", "AWS S3", "Stripe API", "PayPal API", "Figma", "Vercel", "Netlify", "Postman", "Jest", "Cypress", "VPS"],
   };
