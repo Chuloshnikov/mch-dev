@@ -43,14 +43,14 @@ const ContactsSection = () => {
                 </Button>
             </Link>
            <Link
-           href="https://wa.me/380730452115" target="_blank" rel="noopener noreferrer"
+           href="https://wa.me/380977285778" target="_blank" rel="noopener noreferrer"
            >
                 <Button
                 variant="outline"
                 className="cursor-pointer border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black text-lg px-8 py-3"
                 >
                     <Phone className="mr-2 h-5 w-5" />
-                    +380 730 452 115 (WhatsApp)
+                    +38 097 728 5778 (WhatsApp)
                 </Button>
            </Link>
           </motion.div>
