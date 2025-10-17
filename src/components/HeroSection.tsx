@@ -3,7 +3,7 @@
 import Scene3D from './Scene3D';
 import { motion } from "framer-motion"
 import { Button } from './ui/button';
-import { Download, Mail } from 'lucide-react';
+import { Download, GalleryVerticalEnd, Mail } from 'lucide-react';
 import FloatingSocialIcons from './FloatingSocialIcons';
 import Link from 'next/link';
 
@@ -57,7 +57,17 @@ const HeroSection = () => {
                     Download CV
                 </Button>
             </Link>
-            
+            <Link
+            href="#portfolio"
+            >
+              
+                <Button 
+                variant="outline"
+                className="cursor-pointer border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black">
+                  <GalleryVerticalEnd className="mr-2 h-4 w-4"/>
+                    Portfolio
+                </Button>
+            </Link>
             <Link
             href="#contacts"
             >
